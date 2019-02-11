@@ -1,0 +1,30 @@
+.page-header {
+  width: 100%;
+  height: 15rem;
+
+  @include flex-center;
+
+  @include mq-up("md") {
+    height: 25rem;
+  }
+
+  .title {
+    font-family: font("midashi");
+    font-size: 2rem;
+
+    @include mq-up("md") {
+      font-size: 3rem;
+    }
+  }
+
+  .deco {
+    width: 2rem;
+    height: 1px;
+    background: $black;
+
+    @include mq-up("md") {
+      width: 4rem;
+      height: 2px;
+    }
+  }
+}

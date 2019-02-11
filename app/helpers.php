@@ -136,3 +136,18 @@ function display_sidebar()
     isset($display) || $display = apply_filters('sage/display_sidebar', false);
     return $display;
 }
+
+function get_current_page() {
+    $paged = get_query_var('paged');
+    return empty($paged) ? 1 : $paged;
+}
+
+function get_page_max($count) {
+    $posts_per_page = get_option('posts_per_page');
+    return ceil($count / $posts_per_page);
+}
+
+function get_searched_posts_count() {
+    global $wp_query;
+    return $wp_query->found_posts;
+}

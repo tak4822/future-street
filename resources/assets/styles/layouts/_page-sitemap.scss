@@ -1,0 +1,39 @@
+.page-sitemap {
+  margin: 0 $space * 2;
+  border-top: dashed 1px $border;
+  border-bottom: dashed 1px $border;
+
+  @include mq-up("lg") {
+    width: 100rem;
+    margin: auto;
+  }
+
+  .page-lists {
+    padding-left: 0;
+
+    &>li {
+      list-style-type: none;
+      margin-bottom: $space * 2;
+
+      &>a,
+      &>p {
+        font-weight: 700;
+      }
+    }
+  }
+
+  a,
+  .sitemap-section-title {
+    color: $text;
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+
+  .category-lists {
+
+    &>li {
+      margin-top: $space;
+      list-style-type: none;
+    }
+  }
+}

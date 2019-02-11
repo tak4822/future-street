@@ -1,0 +1,56 @@
+.share-buttons {
+  width: 10rem;
+  height: 100vh;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-600px);
+  justify-content: center;
+  align-items: center;
+  display: none;
+
+  @include mq-up("sns") {
+    display: flex;
+
+    &:hover {
+
+      .sns-share {
+
+        .share {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .sns-share {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .share {
+      width: 10rem;
+      position: absolute;
+      top: -5rem;
+      left: -3rem;
+      opacity: 0;
+    }
+
+    .button {
+      width: 2rem;
+      height: 2rem;
+      margin: $space * 3;
+      border: none;
+
+      &.tw {
+        width: 3.5rem;
+        height: 3.5rem;
+      }
+
+      img {
+        height: 100%;
+      }
+    }
+  }
+}

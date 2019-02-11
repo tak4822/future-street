@@ -1,0 +1,138 @@
+.sidebar {
+
+  .popular {
+    margin: 0 $space * 2;
+
+    @include mq-up("lg") {
+      margin: 0;
+    }
+
+    .title-container {
+      width: 100%;
+
+      @include mq-up("sm") {
+        width: 40rem;
+        margin: auto;
+      }
+
+      @include mq-up("lg") {
+        width: 100%;
+      }
+    }
+
+    .holz-list-container {
+      width: 100%;
+      padding-top: $space * 3;
+
+      @include mq-up("sm") {
+        overflow-x: scroll;
+      }
+
+      .holz-list {
+        @include mq-up("sm") {
+          display: flex;
+          width: 100rem;
+        }
+
+        @include mq-up("md") {
+          width: 100%;
+          justify-content: space-around;
+        }
+
+        @include mq-up("lg") {
+          flex-direction: column;
+        }
+
+        .card-big {
+          width: 100%;
+
+          @include mq-up("sm") {
+            width: 36rem;
+            margin-right: $space * 2;
+          }
+
+          @include mq-up("md") {
+            width: 30vw;
+            margin-right: 0;
+          }
+
+          @include mq-up("lg") {
+            width: 30rem;
+          }
+
+          .thumb-container {
+            height: 24rem;
+
+            @include mq-up("sm") {
+              height: 24rem;
+            }
+
+            @include mq-up("md") {
+              height: 20vw;
+            }
+
+            @include mq-up("lg") {
+              height: 20rem;
+            }
+
+            img {
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .matome {
+    margin: 0 $space * 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mq-up("lg") {
+      margin: 0;
+    }
+
+    .title {
+      padding: $space $space * 2;
+      background: $black;
+      margin-bottom: $space * 2;
+
+      .text {
+        color: white;
+      }
+    }
+
+    .banner-wrapper {
+      @include mq-up("md") {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+      }
+
+      @include mq-up("lg") {
+        flex-direction: column;
+      }
+
+      .dumy {
+        width: 36rem;
+        max-width: 100%;
+        height: 24rem;
+        border: 1px solid $border;
+        margin-bottom: $space * 2;
+
+        @include mq-up("md") {
+          width: 30vw;
+          height: 20vw;
+        }
+
+        @include mq-up("lg") {
+          width: 30rem;
+          height: 20rem;
+          margin-bottom: $space * 2;
+        }
+      }
+    }
+  }
+}

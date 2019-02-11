@@ -3,6 +3,12 @@ module.exports = {
   'rules': {
     'no-empty-source': null,
     'string-quotes': 'double',
+    'rule-empty-line-before': ["always-multi-line", {
+      except: ["after-single-line-comment"]
+    }],
+    'no-descending-specificity': null,
+    'selector-combinator-space-after': null,
+    'selector-combinator-space-before': null,
     'at-rule-no-unknown': [
       true,
       {

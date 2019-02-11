@@ -1,0 +1,21 @@
+section.new {
+  width: 100%;
+  padding: 0 $space * 2 0;
+
+  @include mq-up("lg") {
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  .new-deco {
+    width: 100%;
+  }
+
+  .contents {
+    margin-top: $space;
+  }
+
+  .button {
+    width: 100%;
+  }
+}

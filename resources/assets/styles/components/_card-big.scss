@@ -1,0 +1,266 @@
+.card-big {
+  display: block;
+  margin-bottom: $space * 4;
+
+  @include mq-up("sm") {
+    margin-bottom: $space * 6;
+  }
+
+  @include mq-up("lg") {
+
+    &:hover {
+
+      .thumb-container {
+
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  .thumb-container {
+    display: block;
+    width: 100%;
+    max-height: 65vw;
+    overflow: hidden;
+
+    @include mq-up("md") {
+      height: 24rem;
+    }
+
+    img {
+      width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: all 0.6s ease-out;
+
+      @include mq-up("md") {
+        height: 100%;
+      }
+    }
+  }
+
+  .text-container {
+    display: flex;
+    margin-top: $space;
+
+    .vertical {
+      width: 2.5rem;
+
+      @include mq-up("sm") {
+        width: 4rem;
+      }
+
+      .date-wrapper {
+        width: 100%;
+        position: relative;
+
+        .date {
+          position: absolute;
+          text-align: right;
+          width: 8rem;
+          transform: rotate(-90deg) translateY(-8rem);
+          padding-top: -0.5rem;
+          transform-origin: top right;
+          font-family: font("brandon");
+          font-style: italic;
+        }
+      }
+    }
+
+    .horizontal {
+      border-left: solid 1px $border;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      flex: 1;
+
+      .title {
+        font-size: 1.6rem;
+        padding: 0 $space $space;
+      }
+
+      .horz-deco {
+        width: 5rem;
+        height: 0.1rem;
+        background: $border;
+      }
+
+      .tags-wrapper {
+        padding-left: $space;
+
+        .tags {
+          padding-top: $space/2;
+
+          .tag {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+
+  &.ranked {
+    position: relative;
+
+    @include mq-up("md") {
+      width: 32rem;
+    }
+
+    &.rank-0 {
+
+      &::after {
+        content: url("../images/rank_1.svg");
+        position: absolute;
+        top: -2rem;
+        left: 0.5rem;
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+
+    &.rank-1 {
+
+      &::before {
+        content: url("../images/rank_2.svg");
+        position: absolute;
+        top: -2rem;
+        left: 0.5rem;
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+
+    &.rank-2 {
+
+      &::before {
+        content: url("../images/rank_3.svg");
+        position: absolute;
+        top: -2rem;
+        left: 0.5rem;
+        width: 6.5rem;
+        height: 4rem;
+      }
+    }
+
+    .thumb-container {
+      @include mq-up("md") {
+        height: 24rem;
+      }
+    }
+  }
+
+  // ==============================
+  //       popular under 3
+  // ==============================
+  &.simple {
+    margin-bottom: $space;
+
+    .text-container {
+
+      .vertical {
+        display: none;
+
+        @include mq-up("md") {
+          display: flex;
+        }
+      }
+
+      .horizontal {
+        border-left: none;
+
+        @include mq-up("md") {
+          border-left: solid 1px $border;
+        }
+
+        .horz-deco,
+        .tags {
+          display: none;
+
+          @include mq-up("md") {
+            display: flex;
+          }
+        }
+
+        .title {
+          padding: 0;
+
+          @include mq-up("md") {
+            padding: 0 $space $space;
+          }
+        }
+      }
+    }
+
+    &.small {
+      width: 15rem;
+
+      @include mq-up("sm") {
+        width: 18rem;
+      }
+
+      @include mq-up("md") {
+        width: 32rem;
+      }
+
+      .thumb-container {
+        height: 10rem;
+
+        @include mq-up("sm") {
+          height: 12rem;
+        }
+
+        @include mq-up("md") {
+          height: 24rem;
+        }
+      }
+
+      .text-container {
+        margin-top: $space/2;
+
+        @include mq-up("md") {
+          margin-top: $space;
+        }
+
+        .horizontal {
+
+          .title {
+            font-size: 1.2rem;
+
+            @include mq-up("sm") {
+              font-size: 1.4rem;
+            }
+
+            @include mq-up("md") {
+              font-size: 1.6rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.date {
+
+    .text-container {
+
+      .vertical {
+        width: 2rem;
+
+        @include mq-up("sm") {
+          width: 3rem;
+        }
+
+        .date {
+          @include mq-up("sm") {
+            font-size: 1.2rem;
+            padding-top: 0.5rem;
+            padding-right: 0.2rem;
+          }
+        }
+      }
+    }
+  }
+}

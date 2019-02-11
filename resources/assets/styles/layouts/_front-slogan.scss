@@ -1,0 +1,71 @@
+section.slogan {
+  @include mq-up("lg") {
+    position: relative;
+    width: 100rem;
+    margin: 0 auto $space * 10;
+  }
+
+  .head-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: $space*2;
+
+    @include mq-up("lg") {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      align-items: flex-start;
+      margin-left: $space * 4;
+    }
+
+    .slogan-head-text {
+      width: 30rem;
+
+      @include mq-up("md") {
+        width: 50rem;
+      }
+
+      @include mq-up("lg") {
+        width: 35rem;
+      }
+    }
+
+    .slogan-sub-text {
+      margin-top: 1rem;
+    }
+  }
+
+  .main-img {
+    width: 104%;
+    margin-left: -2%;
+
+    @include mq-up("lg") {
+      width: 50%;
+      margin-left: 0;
+    }
+  }
+
+  .copy-wrapper {
+    width: 90%;
+    margin: -10rem auto 0;
+    background: white;
+    padding: $space *2;
+    position: relative;
+
+    @include mq-up("lg") {
+      width: 57%;
+      margin: 0;
+      position: absolute;
+      top: 70%;
+      left: 35%;
+      padding: $space *4;
+    }
+
+    .copy {
+      font-size: 1.4rem;
+      line-height: 2.4rem;
+      font-weight: 400;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.bird-comment {
+  display: flex;
+  margin: $space * 2;
+  align-items: center;
+
+  .bird {
+    width: 6rem;
+
+    @include flex-center;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .bubble {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1.5rem 0.5rem;
+    height: 4rem;
+
+    .border {
+      height: 1px;
+      width: 1.5rem;
+      background: $border;
+
+      &.top {
+        transform: rotate(-30deg);
+      }
+
+      &.bottom {
+        transform: rotate(30deg);
+      }
+    }
+  }
+
+  .comment {
+    flex: 1;
+  }
+}

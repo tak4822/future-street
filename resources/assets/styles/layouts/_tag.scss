@@ -1,0 +1,25 @@
+.tag-page {
+  margin-bottom: $space * 5;
+
+  .tag-hero {
+    height: 16rem;
+
+    @include flex-center;
+
+    .head-text {
+      font-size: 2rem;
+
+      .hash {
+        font-family: font("brandon");
+      }
+    }
+  }
+
+  .articles-container {
+    margin: 0 $space * 2;
+
+    .articles-wrapper {
+      margin-top: $space;
+    }
+  }
+}

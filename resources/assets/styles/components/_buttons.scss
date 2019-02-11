@@ -1,0 +1,28 @@
+.button {
+  border: solid 1px $black;
+  position: relative;
+  height: 5rem;
+
+  @include flex-center;
+
+  &:hover {
+
+    .deco {
+      height: 70%;
+    }
+  }
+
+  .deco {
+    height: 50%;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    transition: all 0.3s ease-out;
+  }
+
+  &.small {
+    width: 12rem;
+    height: 4.5rem;
+    padding-left: 2rem;
+  }
+}

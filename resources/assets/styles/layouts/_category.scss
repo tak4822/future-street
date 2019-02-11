@@ -1,0 +1,135 @@
+.category-page {
+  margin-bottom: $space;
+
+  @include mq-up("md") {
+    margin-bottom: 0;
+  }
+
+  .articles-hero {
+
+    &.interview {
+      background-image: url("../images/interview_sp.jpg");
+
+      @include mq-up("md") {
+        background-image: none;
+      }
+    }
+
+    &.study {
+      background-image: url("../images/study_sp.jpg");
+
+      @include mq-up("md") {
+        background-image: none;
+      }
+    }
+
+    &.lifestyle {
+      background-image: url("../images/lifestyle_sp.jpg");
+
+      @include mq-up("md") {
+        background-image: none;
+      }
+    }
+
+    &.hangout {
+      background-image: url("../images/hangout_sp.jpg");
+
+      @include mq-up("md") {
+        background-image: none;
+      }
+    }
+
+    &.travel {
+      background-image: url("../images/travel_sp.jpg");
+
+      @include mq-up("md") {
+        background-image: none;
+      }
+    }
+
+    @include mq-up("md") {
+      height: 30rem;
+
+      .hero-pc {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .text-img {
+          width: 25rem;
+          height: 40%;
+        }
+
+        .main-img {
+          width: 50rem;
+          height: 80%;
+        }
+
+        &.interview {
+
+          .text-img {
+            @include back-img-contain("text_interview.svg");
+          }
+
+          .main-img {
+            @include back-img-contain("interview_normal.svg");
+          }
+        }
+
+        &.study {
+
+          .text-img {
+            @include back-img-contain("text_study.svg");
+          }
+
+          .main-img {
+            @include back-img-contain("study_normal.svg");
+          }
+        }
+
+        &.lifestyle {
+
+          .text-img {
+            @include back-img-contain("text_lifestyle.svg");
+          }
+
+          .main-img {
+            @include back-img-contain("lifestyle_normal.svg");
+          }
+        }
+
+        &.hangout {
+
+          .text-img {
+            @include back-img-contain("text_hangout.svg");
+          }
+
+          .main-img {
+            @include back-img-contain("hangout_normal.svg");
+          }
+        }
+
+        &.travel {
+
+          .text-img {
+            @include back-img-contain("text_travel.svg");
+          }
+
+          .main-img {
+            @include back-img-contain("travel_normal.svg");
+          }
+        }
+      }
+    }
+  }
+
+  .articles-container {
+    margin: 0 $space * 2;
+
+    .section-title {
+      margin-bottom: $space;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.first-look {
+  @include mq-up("lg") {
+    display: flex;
+    width: 100rem;
+    margin: 4rem auto;
+    position: relative;
+
+    .new {
+      flex: 1;
+    }
+
+    &.fixed {
+
+      section.picked {
+        position: fixed;
+        top: 120px;
+      }
+
+      section.new {
+        margin-left: 556px;
+      }
+    }
+
+    &.end {
+      position: relative;
+
+      section.picked {
+        position: absolute;
+        top: auto;
+        bottom: 0;
+      }
+
+      section.new {
+        margin-left: 556px;
+      }
+    }
+  }
+}

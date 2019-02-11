@@ -1,5 +1,47 @@
 /** Colors */
-$brand-primary:         #525ddc;
+$red: #f4564e;
+$yellow: #fcd41b;
+$blue: #0b71d7;
+$green: #26bf59;
+$pink: #f298ce;
+
+/** Font Colors */
+$black: #111;
+$text: #333;
+$border: #666;
+$gray: #ccc;
+$gray-bg: #fafafa;
+
+$shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.16);
 
 /** Box Model  */
-$spacer:                2rem;
+$space: 0.8rem;
+
+/** z-index  */
+$z-layers: ("modal": 1000,
+"overlay": 900,
+"header": 100,
+"above": 5,
+"below": -1,
+"hidden": -100);
+
+/** font-family  */
+$font-families: ("brandon": #{"brandon-grotesque", sans-serif},
+"midashi": #{"a-otf-midashi-go-mb31-pr6n", sans-serif},
+"regular": #{"dnp-shuei-gothic-kin-std", sans-serif},
+"handmade": #{"verveine", sans-serif},
+);
+
+/** breakpoint  */
+$breakpoint-up: ("sm": "screen and (min-width: 430px)",
+"md": "screen and (min-width: 768px)",
+"lg": "screen and (min-width: 1000px)",
+"sns": "screen and (min-width: 1200px)",
+"xl": "screen and (min-width: 1200px)",
+);
+$breakpoint-down: ("sm": "screen and (max-width: 429px)",
+"md": "screen and (max-width: 767px)",
+"lg": "screen and (max-width: 999px)",
+"sns": "screen and (max-width: 1099px)",
+"xl": "screen and (max-width: 1199px)",
+);

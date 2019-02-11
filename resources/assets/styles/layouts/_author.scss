@@ -1,0 +1,144 @@
+.member-each-page {
+  padding-top: 5vmin;
+
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mq-up("lg") {
+      flex-direction: row;
+      justify-content: center;
+      margin-bottom: $space * 6;
+    }
+
+    .member-box {
+      position: relative;
+      width: 90vmin;
+      height: 90vmin;
+      margin: 0 auto;
+
+      @include mq-up("lg") {
+        width: 50rem;
+        height: 50rem;
+        margin: 0;
+      }
+    }
+
+    .fav {
+      display: inline-block;
+      position: absolute;
+      margin: auto;
+    }
+
+    .name,
+    .color {
+      left: 0;
+      right: 0;
+      text-align: center;
+      padding-top: 10px;
+    }
+
+    .words,
+    .role {
+      top: 50%;
+    }
+
+    .name {
+      font-family: font("handmade");
+      font-size: 4rem;
+      margin-top: 3%;
+
+      @include mq-up("sm") {
+        font-size: 6rem;
+        margin-top: 2%;
+      }
+    }
+
+    .words {
+      font-size: 1.6rem;
+      left: 7%;
+      transform: translate(-50%, -50%) rotate(90deg);
+      font-family: font("midashi");
+
+      @include mq-up("sm") {
+        font-size: 1.8rem;
+      }
+    }
+
+    .role {
+      right: 7%;
+      font-family: font("brandon");
+      font-size: 2rem;
+      transform: translate(50%, -50%) rotate(-90deg);
+
+      @include mq-up("sm") {
+        font-size: 2.4rem;
+      }
+    }
+
+    .color {
+      bottom: 0;
+      font-family: font("brandon");
+      font-size: 1.4rem;
+      font-weight: 200;
+      font-style: italic;
+
+      @include mq-up("sm") {
+        font-size: 1.6rem;
+      }
+    }
+
+    .self-pic {
+      position: absolute;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 40%;
+      height: 40%;
+
+      img {
+        @include covered;
+      }
+    }
+  }
+
+  .discription-container {
+    width: 90vmin;
+    margin: $space * 2 auto;
+
+    @include mq-up("lg") {
+      width: 40rem;
+      margin: 0;
+      margin-left: $space * 2;
+      align-self: flex-end;
+      padding: $space 0;
+      border-top: 1px solid $border;
+      border-bottom: 1px solid $border;
+    }
+
+    p {
+      @include mq-up("lg") {
+        font-size: 1.4rem;
+      }
+    }
+
+    .url {
+      display: block;
+      font-size: 1.2rem;
+      color: $text;
+      margin-top: $space;
+    }
+  }
+
+  .articles-container {
+    width: calc(100vw - 0.8rem * 2);
+    margin: $space * 2;
+
+    .articles-wrapper {
+      margin-top: $space * 2;
+    }
+  }
+}

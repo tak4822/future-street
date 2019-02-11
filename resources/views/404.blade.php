@@ -1,12 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
-  @include('partials.page-header')
-
-  @if (!have_posts())
-    <div class="alert alert-warning">
-      {{ __('Sorry, but the page you were trying to view does not exist.', 'sage') }}
+<div class="content-wrapper">
+  <div class="page-404">
+    <p class="title">404</p>
+    @if (!have_posts())
+    <div class="no-page">
+      @component('partials.bird-comment', [
+      'text' => 'お探しのページは見つからなかったよ！'
+      ])@endcomponent
+      @component('partials.button', [
+      'text' => 'トップページに戻る',
+      'link' => '/'
+      ])@endcomponent
     </div>
-    {!! get_search_form(false) !!}
-  @endif
+    @endif
+  </div>
+</div>
 @endsection

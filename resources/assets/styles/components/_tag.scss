@@ -1,0 +1,16 @@
+.tags {
+  display: flex;
+  align-items: center;
+
+  .tag {
+    padding-right: $space;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: $text;
+
+    @include mq-up("md") {
+      font-size: 1.4rem;
+      padding-right: $space * 2;
+    }
+  }
+}

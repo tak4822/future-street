@@ -1,0 +1,129 @@
+.custom-heading {
+  margin: $space * 6 auto $space * 2;
+  border: 3px solid $black;
+  border-radius: 1rem;
+  padding: $space $space * 2;
+  position: relative;
+  z-index: z("below");
+
+  .white-border {
+    width: 120%;
+    height: 1rem;
+    position: absolute;
+    left: -10%;
+    top: calc(50% - 0.5rem);
+    background: white;
+    z-index: z("below");
+  }
+
+  .custom-heading-text {
+    font-family: font("midashi");
+    font-size: 1.6rem;
+    margin: 0;
+
+    @include mq-up("md") {
+      font-size: 2rem;
+    }
+  }
+}
+
+.sub-heading {
+  margin: $space * 3 auto $space * 1;
+  position: relative;
+  padding: $space;
+
+  .deco {
+    width: 55%;
+    height: 3rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  .deco-1 {
+    border-left: 1px solid $pink;
+    border-bottom: 1px solid $pink;
+    transform: translate(-1px, -1px);
+  }
+
+  .deco-2 {
+    border-left: 1px solid $blue;
+    border-bottom: 1px solid $blue;
+    transform: translate(1px, 1px);
+  }
+
+  .custom-red-text {
+    font-size: 1.4rem;
+    font-family: font("midashi");
+    padding-left: $space;
+
+    @include mq-up("md") {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.custom-note {
+  background: $gray-bg;
+  margin: $space * 2 auto;
+  padding: $space * 2;
+
+  .custom-note-text {
+    font-size: 0.8rem;
+  }
+}
+
+.nlink {
+  display: block;
+  width: 100%;
+  border: 1px solid $gray;
+  padding: 10px;
+  margin: 30px 0;
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .nlink-img {
+    width: 10rem;
+    height: 10rem;
+    float: left;
+
+    @include mq-up("md") {
+      width: 16rem;
+      height: 16rem;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .title {
+    height: 10rem;
+    margin: 0;
+    padding-left: $space;
+    margin-left: 10rem;
+    font-family: font("midashi");
+    font-size: 1.8rem;
+
+    @include mq-up("md") {
+      height: auto;
+      margin-left: 16rem;
+    }
+  }
+
+  .description {
+    margin: 0;
+    margin-top: $space;
+
+    @include mq-up("md") {
+      margin-left: 16rem;
+      padding-left: $space;
+    }
+  }
+}

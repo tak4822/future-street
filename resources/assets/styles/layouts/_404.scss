@@ -1,0 +1,20 @@
+.page-404 {
+  margin: 0 $space * 2 5rem;
+  padding: 2rem 0;
+
+  @include mq-up("lg") {
+    width: 100rem;
+    margin: 0 auto;
+  }
+
+  .title {
+    font-size: 6rem;
+    font-family: font("brandon");
+    text-align: center;
+  }
+
+  .no-page {
+    max-width: 45rem;
+    margin: auto;
+  }
+}

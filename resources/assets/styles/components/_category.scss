@@ -1,0 +1,59 @@
+.category-component {
+  display: flex;
+  align-items: center;
+  padding: 0.3rem $space 0.3rem $space;
+
+  .ico {
+    width: 2rem;
+    height: 2rem;
+    margin-right: $space/2;
+
+    @include mq-up("sm") {
+      width: 3rem;
+      height: 3rem;
+    }
+
+    &.ico-Interview {
+      @include back-img-contain("ico_interview.svg");
+    }
+
+    &.ico-Study {
+      @include back-img-contain("ico_study.svg");
+    }
+
+    &.ico-LifeStyle {
+      @include back-img-contain("ico_lifestyle.svg");
+    }
+
+    &.ico-HangOut {
+      @include back-img-contain("ico_hangout.svg");
+    }
+
+    &.ico-Travel {
+      @include back-img-contain("ico_travel.svg");
+    }
+  }
+
+  .text {
+    font-family: font("brandon");
+  }
+
+  &.vertical {
+    flex-direction: column;
+
+    .text {
+      transform: rotate(90deg);
+      padding-left: 3rem;
+      padding-top: 0.2rem;
+      font-size: 1.2rem;
+
+      @include mq-up("sm") {
+        font-size: 1.4rem;
+      }
+
+      @include mq-up("md") {
+        padding-left: 4rem;
+      }
+    }
+  }
+}

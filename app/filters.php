@@ -89,3 +89,40 @@ add_filter('comments_template', function ($comments_template) {
 
     return $comments_template;
 }, 100);
+
+add_filter( 'get_the_archive_title', function ($title) {
+
+    if ( is_category() ) {
+
+        $title = single_cat_title( '', false );
+
+    } elseif ( is_tag() ) {
+
+        $title = single_tag_title( '', false );
+
+    } elseif ( is_author() ) {
+
+        $title = '<span class="vcard">' . get_the_author() . '</span>' ;
+
+    }
+
+    return $title;
+
+});
+
+add_filter('get_search_form', function () {
+    $form = '';
+    echo template('partials.searchform');
+    return $form;
+});
+
+add_filter('sage/display_sidebar', function ($display) {
+    static $display;
+
+    isset($display) || $display = in_array(true, [
+        // The sidebar will be displayed if any of the following return true
+        is_single(),
+    ]);
+
+    return $display;
+});

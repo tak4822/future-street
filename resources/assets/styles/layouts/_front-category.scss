@@ -1,0 +1,232 @@
+section.category {
+  display: block;
+
+  @include mq-up("lg") {
+    width: 100rem;
+    margin: auto;
+  }
+
+  .category-each {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $space * 4;
+
+    @include mq-up("md") {
+      margin-bottom: $space * 8;
+    }
+
+    .category-picked-container {
+      @include mq-up("md") {
+        display: flex;
+      }
+
+      @include mq-up("lg") {
+        margin-bottom: $space *2;
+      }
+
+      .category-img {
+        width: 100%;
+        height: calc(100vw * 5 / 6);
+
+        @include mq-up("md") {
+          flex: 1;
+          height: calc(60vw * 5 / 6);
+        }
+
+        @include mq-up("lg") {
+          height: calc(600px * 5 / 6);
+        }
+
+        &.interview {
+          @include back-img-contain("interview_sp.jpg");
+
+          @include mq-up("sm") {
+            @include back-img-contain("interview_pc.jpg");
+          }
+        }
+
+        &.study {
+          @include back-img-contain("study_sp.jpg");
+
+          order: 2;
+
+          @include mq-up("sm") {
+            @include back-img-contain("study_pc.jpg");
+          }
+        }
+
+        &.lifestyle {
+          @include back-img-contain("lifestyle_sp.jpg");
+
+          @include mq-up("sm") {
+            @include back-img-contain("lifestyle_pc.jpg");
+          }
+        }
+
+        &.hangout {
+          @include back-img-contain("hangout_sp.jpg");
+
+          order: 2;
+
+          @include mq-up("sm") {
+            @include back-img-contain("hangout_pc.jpg");
+          }
+        }
+
+        &.travel {
+          @include back-img-contain("travel_sp.jpg");
+
+          @include mq-up("sm") {
+            @include back-img-contain("travel_pc.jpg");
+          }
+        }
+      }
+
+      .picked-article-category {
+        padding: 0 $space * 2;
+
+        @include mq-up("md") {
+          width: 40%;
+          align-self: flex-end;
+          padding: 0 $space * 2 0 0;
+
+          &.study,
+          &.hangout {
+            padding: 0 0 0 $space * 2;
+          }
+        }
+
+        @include mq-up("lg") {
+          padding: 0;
+
+          &.study,
+          &.hangout {
+            padding: 0;
+          }
+
+          .thumb-container {
+            height: 24rem;
+          }
+        }
+
+        .card-big {
+          margin-bottom: $space * 2;
+        }
+      }
+    }
+
+    .list-container {
+      overflow-x: scroll;
+      overflow-y: hidden;
+      width: 100%;
+      padding-left: $space * 2;
+
+      @include mq-up("md") {
+        padding-right: $space * 2;
+        overflow-x: visible;
+      }
+
+      @include mq-up("lg") {
+        padding-right: 0;
+        padding-left: 0;
+      }
+
+      .list {
+        display: flex;
+        width: 82rem;
+
+        @include mq-up("sm") {
+          width: 95rem;
+        }
+
+        @include mq-up("md") {
+          width: 100%;
+        }
+
+        .simple-card {
+          margin-right: $space * 2;
+          width: 15rem;
+
+          @include mq-up("sm") {
+            width: 18rem;
+          }
+
+          @include mq-up("md") {
+            flex: 4;
+          }
+
+          @include mq-up("lg") {
+
+            &:hover {
+
+              .img-container {
+
+                img {
+                  transform: scale(1.1);
+                }
+              }
+            }
+          }
+
+          .img-container {
+            width: 100%;
+            height: 10rem;
+            overflow: hidden;
+
+            @include mq-up("sm") {
+              height: 12rem;
+            }
+
+            img {
+              transition: all 0.6s ease-out;
+
+              @include covered;
+            }
+          }
+
+          .title {
+            padding-top: $space / 2;
+            width: 100%;
+            font-size: 1.4rem;
+            line-height: 1.9rem;
+          }
+
+          &:first-child {
+            display: none;
+          }
+
+          &:nth-child(4) {
+            @include mq-up("md") {
+              display: none;
+            }
+
+            @include mq-up("lg") {
+              display: block;
+            }
+          }
+        }
+
+        .button {
+          width: 14rem;
+          height: auto;
+
+          @include mq-up("md") {
+            flex: 3;
+          }
+
+          &:hover {
+
+            .deco {
+              height: 30%;
+            }
+          }
+
+          .deco {
+            height: 20%;
+            transition: all 0.3s ease-out;
+          }
+        }
+      }
+    }
+  }
+}

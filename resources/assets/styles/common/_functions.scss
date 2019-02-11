@@ -1,0 +1,15 @@
+@function z($layer) {
+  @if not map-has-key($z-layers, $layer) {
+    @warn "No layer found for `#{$layer}` in $z-layers map. Property omitted.";
+  }
+
+  @return map-get($z-layers, $layer);
+}
+
+@function font($font) {
+  @if not map-has-key($font-families, $font) {
+    @warn "No font found for `#{$font}` in $font-families map. Property omitted.";
+  }
+
+  @return map-get($font-families, $font);
+}

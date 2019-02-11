@@ -1,0 +1,40 @@
+.page-policy {
+  margin: 0 $space * 2;
+
+  @include mq-up("lg") {
+    width: 100rem;
+    margin: 0 auto;
+  }
+
+  .head {
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 2rem;
+    border-bottom: 2px solid $text;
+    margin-top: $space * 4;
+
+    @include mq-up("lg") {
+      font-size: 2rem;
+      line-height: 3.2rem;
+    }
+  }
+
+  .inner-contents {
+    padding: $space;
+
+    ul {
+      margin: $space * 2 auto;
+      padding-left: $space * 2;
+
+      li {
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+      }
+    }
+
+    .inner-title {
+      font-weight: 600;
+      margin-top: $space * 2;
+    }
+  }
+}

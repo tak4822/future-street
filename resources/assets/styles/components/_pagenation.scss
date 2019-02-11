@@ -1,0 +1,112 @@
+.pagination-container {
+  @include mq-up("md") {
+    display: flex;
+    justify-content: center;
+  }
+
+  .next-button {
+    @include mq-up("md") {
+      width: 30rem;
+    }
+  }
+
+  .nav {
+    margin-top: $space * 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include mq-up("md") {
+      margin-top: 0;
+    }
+
+    .dir-button {
+      width: 4.5rem;
+      height: 4.5rem;
+      background: $black;
+
+      @include flex-center;
+
+      img {
+        width: 1.2rem;
+        transition: all 0.3s ease-out;
+      }
+
+      &.prev {
+
+        &:hover {
+
+          img {
+            transform: translateX(-4px);
+          }
+        }
+
+        img {
+          margin-right: 0.2rem;
+        }
+      }
+
+      &.next {
+
+        &:hover {
+
+          img {
+            transform: translateX(4px);
+          }
+        }
+
+        img {
+          margin-left: 0.2rem;
+        }
+      }
+    }
+
+    .now {
+      display: flex;
+      align-items: center;
+      font-family: font("brandon");
+      margin: 0 $space * 3;
+      font-weight: 700;
+      font-size: 1.4rem;
+
+      .select-wrap {
+        position: relative;
+
+        .select {
+          -moz-appearance: none;
+          -webkit-appearance: none;
+          border: solid 1px $black;
+          background: none;
+          appearance: none;
+          border-radius: 0;
+          height: 4.5rem;
+          width: 7rem;
+          font-family: font("brandon");
+          font-weight: 700;
+          font-size: 2rem;
+          padding-left: 2rem;
+          cursor: pointer;
+        }
+
+        &::after {
+          content: "";
+          width: 1rem;
+          height: 1rem;
+          background-image: url("../images/ico_select.svg");
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center center;
+          position: absolute;
+          top: calc(50% - 0.5rem);
+          right: 1rem;
+          z-index: z("below");
+        }
+      }
+
+      .slash {
+        width: 1rem;
+        margin: 0 $space;
+      }
+    }
+  }
+}
