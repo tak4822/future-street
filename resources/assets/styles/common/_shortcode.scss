@@ -127,3 +127,15 @@
     }
   }
 }
+
+.article-marker {
+  font-weight: bold;
+
+  &.yellow {
+    background: linear-gradient(transparent 60%, $yellow 0%);
+  }
+
+  &.pink {
+    background: linear-gradient(transparent 60%, #ff95cc 0%);
+  }
+}

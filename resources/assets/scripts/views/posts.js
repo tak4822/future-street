@@ -1,4 +1,5 @@
 import header from '../modules/header';
+import toc from '../modules/toc';
 
 export default {
   namespace: 'posts',
@@ -7,7 +8,7 @@ export default {
     header.fix();
   },
   onEnterCompleted: function () {
-
+    toc();
   },
   onLeave: function () {
     // 次のページへのトランジションが始まった時。

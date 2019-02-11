@@ -8,7 +8,7 @@
   <!-- End Google Tag Manager (noscript) -->
   <div class="transition-overlay"></div>
   <div id="site-wrap" style="opacity: 0;">
-    @php do_action('get_header') @endphp
+    @php(do_action('get_header'))
     @include('partials.header')
     @include('partials.mobile-search')
     <div class="wrap container" role="document">
@@ -23,10 +23,10 @@
         </div>
       </div>
     </div>
-    @php do_action('get_footer') @endphp
+    @php(do_action('get_footer'))
     @include('partials.footer')
   </div>
-  @php wp_footer() @endphp
+  @php(wp_footer())
 </body>
 
 </html>

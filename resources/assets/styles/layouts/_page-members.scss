@@ -22,7 +22,6 @@
 
   .member-list {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
 
     @include mq-up("sm") {
@@ -35,17 +34,15 @@
     }
 
     .member-wrapper {
-      width: 30%;
-      margin-bottom: $space *2;
+      width: 33.33%;
       position: relative;
 
       @include mq-up("md") {
-        width: 23%;
+        width: 25%;
       }
 
       @include mq-up("lg") {
-        width: 18%;
-        margin-bottom: $space *3;
+        width: 20%;
 
         &:hover {
 
@@ -82,7 +79,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         font-family: font("handmade");
-        font-size: 5rem;
+        font-size: 3rem;
         z-index: z("below");
 
         @include mq-up("lg") {

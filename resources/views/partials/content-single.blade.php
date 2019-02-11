@@ -25,7 +25,7 @@
         {{ get_post_meta(get_the_ID(), 'short_description', true) }}
       </p>
 
-      <div class="toc"></div>
+      <div id="toc"></div>
 
       <div class="entry-contents">
         @php(the_content())

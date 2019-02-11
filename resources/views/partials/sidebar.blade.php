@@ -24,9 +24,15 @@
       <p class="text">おすすめまとめ記事</p>
     </div>
     <div class="banner-wrapper">
-      <div class="dumy"></div>
-      <div class="dumy"></div>
-      <div class="dumy"></div>
+      <a href="/ca_lifestyle_prepare_matome/" class="matome">
+        <img src="@asset('images/matome_1.jpg')" alt="">
+      </a>
+      <a href="/ca_todo_matome/" class="matome">
+        <img src="@asset('images/matome_2.jpg')" alt="">
+      </a>
+      <a href="/ca_hangout_hima_matome/" class="matome">
+        <img src="@asset('images/matome_3.jpg')" alt="">
+      </a>
     </div>
   </div>
 </div>

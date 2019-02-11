@@ -62,23 +62,29 @@ class FrontPage extends Controller
   static function get_members_data() {
     $member_ids = get_users( array( 'fields' => array( 'ID' ) ) );
     $members_data = array();
-    $i = 0; // TODO: delete
 
     foreach($member_ids as $id) {
-      if ($i < 3) {
         $member = get_user_meta($id->ID);
+        $avator = get_avatar_url($id->ID, array("size"=>350));
+        $name = $member['nickname'][0];
+        $role = $member['role'][0];
+        $color = $member['color'][0];
+        $words = $member['favorite_words'][0];
+        $desc = $member['description'][0];
+
         $member_data = array(
-          'avator' =>get_avatar_url($id->ID, array("size"=>350)),
-          'name' => $member['nickname'][0],
-          'role' => $member['role'][0],
-          'color' => $member['color'][0],
-          'words' => $member['favorite_words'][0],
-          'desc' => $member['description'][0],
+          'avator' => $avator,
+          'name' => $name,
+          'role' => $role,
+          'color' => $color,
+          'words' => $words,
+          'desc' => $desc,
         );
-        array_push($members_data, $member_data);
+        if( $avator && $name && $role & $color && $words && $desc ) {
+          array_push($members_data, $member_data);
+        } 
       }
-      $i ++;
-    }
+    // shuffle($members_data);
     return $members_data;
   }
 }

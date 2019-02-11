@@ -137,7 +137,6 @@ section {
   .articles-wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 
     @include mq-up("lg") {
       width: 100rem;
@@ -148,18 +147,23 @@ section {
       width: 100%;
 
       @include mq-up("md") {
-        width: 49%;
+        width: calc((100vw - 52px) / 2);
+
+        &:nth-child(odd) {
+          margin-right: 2rem;
+        }
       }
 
       @include mq-up("lg") {
-        width: 31.2rem;
+        width: calc(96rem / 3);
 
         &:nth-child(odd) {
-          padding-right: 0;
+          margin-right: 0;
         }
 
-        &:nth-child(even) {
-          padding-left: 0;
+        &:nth-child(3n + 1),
+        &:nth-child(3n + 2) {
+          margin-right: 2rem;
         }
 
         .thumb-container {
