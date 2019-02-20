@@ -7,7 +7,7 @@
       'date' => get_post_time('M j, Y'),
       'link' => get_permalink(),
       'title' => get_the_title(),
-      'image' => get_the_post_thumbnail_url(get_the_ID(), 'medium'),
+      'image' => get_the_post_thumbnail_url(get_the_ID(), 'small_thumb'),
       'category' => get_the_category()[0]->cat_name,
       ])
       @endcomponent

@@ -398,7 +398,7 @@
       !!}
       @endif
       <div class="contact">
-        <a class="button-text" href="">お問い合わせ</a>
+        <a class="button-text" href="/contact">お問い合わせ</a>
         <div class="deco"></div>
       </div>
       <div class="fun-text head-text yo">

@@ -78,7 +78,7 @@ class App extends Controller
                 'link' => get_permalink(),
                 'title' => get_the_title(),
                 'tags' => get_the_tags(),
-                'image' =>  get_the_post_thumbnail_url($the_query->post->ID, 'midium'),
+                'image' =>  get_the_post_thumbnail_url($the_query->post->ID, 'normal_thumb'),
             );
             array_push($cat_posts, $output);
             $count ++;
@@ -106,7 +106,8 @@ class App extends Controller
 
     static function getImage() {
         if ( is_single() ) {
-            return get_the_post_thumbnail_url(get_the_ID(), 'normal_thumb');
+            $post_ID = get_queried_object()->ID;
+            return get_the_post_thumbnail_url($post_ID, 'normal_thumb');
         } else {
             return null;
         }

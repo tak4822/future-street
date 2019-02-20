@@ -10,7 +10,7 @@
           @component('partials.card-big', [
           'link' => get_permalink(),
           'title' => get_the_title(),
-          'image' => get_the_post_thumbnail_url(get_the_ID(), 'medium'),
+          'image' => get_the_post_thumbnail_url(get_the_ID(), 'normal_thumb'),
           'category' => get_the_category()[0]->cat_name,
           'tags' => get_the_tags(),
           'class' => 'ranked rank-' . $i

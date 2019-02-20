@@ -14,7 +14,7 @@
         'link' => get_permalink(),
         'date' => get_post_time('M j, Y'),
         'title' => get_the_title(),
-        'image' => get_the_post_thumbnail_url(),
+        'image' => get_the_post_thumbnail_url(get_the_ID(), 'normal_thumb'),
         'tags' => get_the_tags(),
         'category' => get_the_category()[0]->name,
         'class' => ''

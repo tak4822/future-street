@@ -19,7 +19,7 @@
         </div>
       </div>
       <div class="thumbnail-wrapper">
-        <img src="{{ get_the_post_thumbnail_url() }}" alt="">
+        <img src="{{ get_the_post_thumbnail_url(get_the_ID(), 'large') }}" alt="">
       </div>
       <p class="short-description">
         {{ get_post_meta(get_the_ID(), 'short_description', true) }}

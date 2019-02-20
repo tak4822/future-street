@@ -128,7 +128,7 @@ add_shortcode('interviewer', __NAMESPACE__ . '\\interviewerBalloonFunc');
 function intervieweeBalloonFunc( $atts,  $content = null ) {
 
     $interviewee_image_id = get_post_meta(get_the_ID(), 'interviewee_image', true);
-    $interviewee_url = wp_get_attachment_image_src($interviewee_image_id, 'Small_thumb')[0];
+    $interviewee_url = wp_get_attachment_image_src($interviewee_image_id, 'small_thumb')[0];
 
     return interviewHtmlGenerator('left',  $interviewee_url, $content);
 }

@@ -55,6 +55,9 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
      */
     add_theme_support('post-thumbnails');
+    set_post_thumbnail_size(360, 240, true);
+    add_image_size('normal_thumb', 360, 240, true); // For using if statement in blade
+    add_image_size('small_thumb', 180, 120, true);
 
     /**
      * Enable HTML5 markup support
